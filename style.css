@@ -89,7 +89,7 @@ nav a:hover {
 }
 
 .featured-image {
-    width: 100px;
+    width: 100%;
     max-width: 300px;
     object-fit: cover;
     object-position: center;
