@@ -261,3 +261,83 @@ aside {
         align-self: stretch;
     }
 }
+/* ===== ANIMASI BIAR HIDUP ===== */
+
+/* 1. Semua card jadi halus pas di-hover */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px 0 rgb(0, 0, 0, 0.18);
+}
+
+/* 2. Foto nge-zoom pelan */
+.featured-image {
+    transition: transform 0.5s ease;
+}
+
+.featured-image:hover {
+    transform: scale(1.03);
+}
+
+/* 3. Tombol hero ada efeknya */
+.btn-putih,
+.btn-outline,
+.btn-biru {
+    transition: all 0.3s ease;
+}
+
+.btn-putih:hover {
+    background: #FFD966;
+    transform: scale(1.05);
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #0A2A66;
+    transform: scale(1.05);
+}
+
+.btn-biru:hover {
+    background: #1E4D9A;
+    transform: scale(1.05);
+}
+
+/* 4. Kuliner card goyang dikit */
+.kuliner-card {
+    transition: transform 0.3s ease;
+}
+
+.kuliner-card:hover {
+    transform: translateY(-6px) rotate(-1deg);
+}
+
+/* 5. Animasi muncul pas scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 6. Judul Hero muncul dari atas */
+.jumbotron h1 {
+    animation: turun 0.8s ease;
+}
+
+@keyframes turun {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
